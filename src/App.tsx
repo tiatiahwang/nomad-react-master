@@ -32,9 +32,6 @@ footer, header, hgroup, main, menu, nav, section {
 *[hidden] {
     display: none;
 }
-body {
-  line-height: 1;
-}
 menu, ol, ul, li {
   list-style: none;
 }
@@ -54,9 +51,11 @@ table {
   box-sizing: border-box;
 }
 body {
+  font-weight: 300;
   font-family: 'Source Sans Pro', sans-serif;
   background-color:${({ theme }) => theme.bgColor};
-  color:${({ theme }) => theme.textColor}
+  color:${(props) => props.theme.textColor};
+  line-height: 1.2;
 }
 a {
   text-decoration:none;
