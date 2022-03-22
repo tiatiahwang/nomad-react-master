@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { useLocation, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { fetchCoinInfo, fetchCoinTickers } from '../api';
+import { FaChevronLeft } from 'react-icons/fa';
 
 const Container = styled.div`
   padding: 0px 20px;
@@ -13,11 +14,21 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 
-const Header = styled.li`
+const Header = styled.div`
   height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  a {
+    position: absolute;
+    left: 0;
+    &:hover {
+      transition: 0.25s ease-in-out;
+      color: ${({ theme }) => theme.accentColor};
+      cursor: pointer;
+    }
+  }
 `;
 
 const Title = styled.h1`
@@ -188,6 +199,9 @@ function Coin() {
         </title>
       </Helmet>
       <Header>
+        <Link to="/">
+          <FaChevronLeft size="30" />
+        </Link>
         <Title>
           {state?.name ? state.name : loading ? 'Loading...' : infoData?.name}
         </Title>

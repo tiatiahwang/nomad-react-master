@@ -90,7 +90,7 @@ function Price() {
   ) : (
     <>
       <Overview>
-        <OverviewTitle>Price Fluctuations</OverviewTitle>
+        <OverviewTitle>FLUCTUATIONS</OverviewTitle>
         <Box>
           <OverviewItem>
             <span>12 HOURS</span>
