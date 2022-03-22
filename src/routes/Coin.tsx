@@ -23,6 +23,7 @@ const Header = styled.li`
 const Title = styled.h1`
   color: ${({ theme }) => theme.accentColor};
   font-size: 48px;
+  font-weight: 500;
 `;
 
 const Loader = styled.span`
@@ -211,7 +212,6 @@ function Coin() {
           </Overview>
           <Description>{infoData?.description}</Description>
           <Overview>
-            infoData
             <OverviewItem>
               <span>Total Supply:</span>
               <span>{tickersData?.total_supply}</span>
